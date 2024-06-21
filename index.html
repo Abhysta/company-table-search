@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container-table">
+      <div class="heading-text">
+        <h1>Company</h1>
+        <div class="right-heading">
+          <div class="search">
+            <input type="text" placeholder="search" />
+          </div>
+          <button class="add" onclick="modal()">Add</button>
+        </div>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Time</th>
+              <th>Web</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Address</th>
+              <th>Status</th>
+              <th colspan="2">Action</th>
+            </tr>
+          </thead>
+
+          <tbody class="tbody">
+            <tr>
+              <td>1</td>
+              <td>
+                <img src="company.webp" alt="company" />
+              </td>
+              <td class="name">BCA</td>
+              <td>IT</td>
+              <td class="time"></td>
+              <td>jobstreet.com</td>
+              <td>bca@gmail.com</td>
+              <td>0822222</td>
+              <td>Jakarta</td>
+              <td>Melamar</td>
+              <td>
+                <button class="edit">Edit</button>
+              </td>
+              <td><button class="delete">Delete</button></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>
+                <img src="company.webp" alt="company" />
+              </td>
+              <td class="name">BRI</td>
+              <td>IT</td>
+              <td class="time"></td>
+              <td>jobstreet.com</td>
+              <td>bri@gmail.com</td>
+              <td>0822222</td>
+              <td>Jakarta</td>
+              <td>Melamar</td>
+              <td>
+                <button class="edit">Edit</button>
+              </td>
+              <td><button class="delete">Delete</button></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>
+                <img src="company.webp" alt="company" />
+              </td>
+              <td class="name">PAMA</td>
+              <td>IT</td>
+              <td class="time"></td>
+              <td>jobstreet.com</td>
+              <td>pama@gmail.com</td>
+              <td>0822222</td>
+              <td>Jakarta</td>
+              <td>Melamar</td>
+              <td>
+                <button class="edit">Edit</button>
+              </td>
+              <td><button class="delete">Delete</button></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>
+                <img src="company.webp" alt="company" />
+              </td>
+              <td class="name">BCA</td>
+              <td>IT</td>
+              <td class="time"></td>
+              <td>jobstreet.com</td>
+              <td>bca@gmail.com</td>
+              <td>0822222</td>
+              <td>Jakarta</td>
+              <td>Melamar</td>
+              <td>
+                <button class="edit">Edit</button>
+              </td>
+              <td><button class="delete">Delete</button></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>
+                <img src="company.webp" alt="company" />
+              </td>
+              <td class="name">BCA</td>
+              <td>IT</td>
+              <td class="time"></td>
+              <td>jobstreet.com</td>
+              <td>bca@gmail.com</td>
+              <td>0822222</td>
+              <td>Jakarta</td>
+              <td>Melamar</td>
+              <td>
+                <button class="edit">Edit</button>
+              </td>
+              <td><button class="delete">Delete</button></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>
+                <img src="company.webp" alt="company" />
+              </td>
+              <td class="name">BCA</td>
+              <td>IT</td>
+              <td class="time"></td>
+              <td>jobstreet.com</td>
+              <td>bca@gmail.com</td>
+              <td>0822222</td>
+              <td>Jakarta</td>
+              <td>Melamar</td>
+              <td>
+                <button class="edit">Edit</button>
+              </td>
+              <td><button class="delete">Delete</button></td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>
+                <img src="company.webp" alt="company" />
+              </td>
+              <td class="name">BCA</td>
+              <td>IT</td>
+              <td class="time"></td>
+              <td>jobstreet.com</td>
+              <td>bca@gmail.com</td>
+              <td>0822222</td>
+              <td>Jakarta</td>
+              <td>Melamar</td>
+              <td>
+                <button class="edit">Edit</button>
+              </td>
+              <td><button class="delete">Delete</button></td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>
+                <img src="company.webp" alt="company" />
+              </td>
+              <td class="name">BCA</td>
+              <td>IT</td>
+              <td class="time"></td>
+              <td>jobstreet.com</td>
+              <td>bca@gmail.com</td>
+              <td>0822222</td>
+              <td>Jakarta</td>
+              <td>Melamar</td>
+              <td>
+                <button class="edit">Edit</button>
+              </td>
+              <td><button class="delete">Delete</button></td>
+            </tr>
+          </tbody>
+          <tr id="notFound">
+            <td colspan="12"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="container-modal">
+      <button class="modal-btn" onclick="modal()">X</button>
+      <div class="modal">
+        <h2>Add Data</h2>
+        <form>
+          <input type="text" placeholder="name" />
+          <input type="text" placeholder="position" />
+          <input type="date" />
+          <input type="text" placeholder="email" />
+        </form>
+      </div>
+    </div>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>
